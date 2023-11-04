@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "aLnQGomQ8TWzDYztnJuiFEDzJsbbYeu58j3aavjqpYGc6pSOFv4Cvk+pWwftg55qUCx10V7f8iQGIzuRz19adA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Dominio\\Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gustavo\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Gustavo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
