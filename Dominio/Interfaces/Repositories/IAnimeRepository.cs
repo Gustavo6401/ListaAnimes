@@ -5,4 +5,5 @@ namespace Dominio.Interfaces.Repositories;
 
 public interface IAnimeRepository : IRepository<Anime>
 {
+    Task<Anime> GetByName(string nome);
 }

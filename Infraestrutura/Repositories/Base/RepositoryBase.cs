@@ -1,37 +1,41 @@
 ﻿using Dominio.Interfaces.Repositories.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Infraestrutura.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infraestrutura.Repositories.Base
 {
     public class RepositoryBase<T> : IRepository<T> where T : class
     {
-        public Task Create(T entity)
+        private AnimeContext Context { get; }
+        public RepositoryBase(AnimeContext context)
         {
-            throw new NotImplementedException();
+            Context = context;
+        }
+        public async Task Create(T entity)
+        {
+            Context.Set<T>().Add(entity);
+
+            await Context.SaveChangesAsync();
         }
 
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
-            throw new NotImplementedException();
+            var anime = await GetById(id);
+
+            Context.Set<T>().Remove(anime);
+
+            await Context.SaveChangesAsync();
         }
 
-        public Task<IList<T>> GetAll()
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<IList<T>> GetAll() => await Context.Set<T>().ToListAsync();
 
-        public Task<T> GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<T> GetById(int id) => await Context.Set<T>().FindAsync(id);
 
-        public void Update(T entity)
+        public async Task Update(T entity)
         {
-            throw new NotImplementedException();
+            Context.Set<T>().Update(entity);
+
+            await Context.SaveChangesAsync();
         }
     }
 }
