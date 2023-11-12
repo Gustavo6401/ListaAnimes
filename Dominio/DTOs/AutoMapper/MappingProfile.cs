@@ -10,6 +10,14 @@ namespace Dominio.DTOs.AutoMapper
 {
     internal class MappingProfile : Profile
     {
-        public MappingProfile() { CreateMap<Anime, AnimeDTO>().ReverseMap(); }
+        public MappingProfile() 
+        {
+            /*
+             * 
+             */
+            CreateMap<AnimeDTO, Anime>();
+            /*CreateMap<Anime, AnimeDTO>()
+                .ForMember(x => x.PorcentagemConcluida)*/
+        }
     }
 }

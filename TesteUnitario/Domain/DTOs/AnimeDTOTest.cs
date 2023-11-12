@@ -8,14 +8,7 @@ namespace TesteUnitario.Domain.DTOs
         [TestMethod]
         public void TestarDTO()
         {
-            AnimeDTO dto = new AnimeDTO
-            {
-                Id = 3,
-                Nome = "One Piece",
-                EpQueParei = 44,
-                NumeroEpisodios = 1000,
-                Status = "Assistindo"
-            };
+            AnimeDTO dto = new AnimeDTO(3, "One Piece", 1000, "Assistindo", 44);
 
             Assert.AreEqual(dto.Id, 3);
             Assert.AreEqual(dto.Nome, "One Piece");
@@ -28,14 +21,9 @@ namespace TesteUnitario.Domain.DTOs
         [TestMethod]
         public void VerificarPorcentagem()
         {
-            AnimeDTO dto = new AnimeDTO
-            {
-                Id = 1,
-                Nome = "Naruto Shippuden",
-                EpQueParei = 73,
-                NumeroEpisodios = 500,
-                Status = "Assistindo"
-            };
+            AnimeDTO dto = new AnimeDTO(1, "Naruto Shippuden", 500, "Assistindo", 73);            
+
+            AnimeDTO d = dto;
 
             Assert.AreEqual(dto.PorcentagemConcluida, 14.6m);
         }
