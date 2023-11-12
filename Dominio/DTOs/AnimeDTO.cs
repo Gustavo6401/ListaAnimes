@@ -18,5 +18,9 @@ namespace Dominio.DTOs
         [MaxLength(20)]
         [Required(ErrorMessage = "Status Obrigatório!")]
         public string? Status { get; set; }
+        public int EpQueParei { get; set; }
+        public decimal PorcentagemConcluida { get; set; }
+
+        public decimal PorcentagemConclusao() => this.PorcentagemConcluida = EpQueParei * 100 / NumeroEpisodios;
     }
 }

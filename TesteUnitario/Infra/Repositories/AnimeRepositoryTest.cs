@@ -1,9 +1,7 @@
-﻿using Dominio.Entities;
-using Infraestrutura.Repositories;
+﻿using Infraestrutura.Repositories;
 using Dominio.Interfaces.Repositories;
 using Infraestrutura.Context;
-using System.Xml.Linq;
-using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
+using Dominio.Entities;
 
 namespace TesteUnitario.Infra.Repositories;
 
@@ -96,6 +94,19 @@ public class AnimeRepositoryTest
         Assert.AreEqual(anime.EpQueParei, resultado.EpQueParei);
         Assert.AreEqual(anime.NumeroEpisodios, resultado.NumeroEpisodios);
         Assert.AreEqual(anime.Status, resultado.Status);
+    }
+
+    [TestMethod]
+    public async Task ConsultarPorNome()
+    {
+        IAnimeRepository repository = new AnimeRepository(context);
+
+        Anime anime = await repository.GetByName("Naruto Shippuden");
+
+        Assert.AreEqual(anime.Nome, "Naruto Shippuden");
+        Assert.AreEqual(anime.EpQueParei, 71);
+        Assert.AreEqual(anime.NumeroEpisodios, 500);
+        Assert.AreEqual(anime.Status, "Assistindo");
     }
 
     [TestMethod]
