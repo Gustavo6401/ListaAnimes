@@ -14,14 +14,7 @@ public class AnimeRepositoryTest
     [TestMethod]
     public async Task AdicionarAnime()
     {
-        var anime = new Anime
-        {
-            Id = 0,
-            Nome = "Naruto Shippuden",
-            EpQueParei = 71,
-            NumeroEpisodios = 500,
-            Status = "Assistindo"
-        };
+        Anime anime = new Anime(0, "Naruto Shippuden", 74, 500, "Assistindo");
 
         IAnimeRepository repository = new AnimeRepository(context);
         await repository.Create(anime);
@@ -38,23 +31,8 @@ public class AnimeRepositoryTest
     // Para rodar esse teste unitário, é necessário excluir os dados do banco de dados
     public async Task ListarTodosAnimes()
     {
-        var naruto = new Anime
-        {
-            Id = 0,
-            Nome = "Naruto Shippuden",
-            EpQueParei = 71,
-            NumeroEpisodios = 500,
-            Status = "Assistindo"
-        };
-
-        var dbz = new Anime
-        {
-            Id = 0,
-            Nome = "Dragon Ball Z",
-            EpQueParei = 82,
-            NumeroEpisodios = 291,
-            Status = "Assistindo"
-        };
+        Anime naruto = new Anime(0, "Naruto Shippuden", 74, 500, "Assistindo");
+        Anime dbz = new Anime(0, "Dragon Ball Z", 82, 291, "Assistindo");
 
         IAnimeRepository repository = new AnimeRepository(context);
         await repository.Create(dbz);
@@ -75,14 +53,7 @@ public class AnimeRepositoryTest
     [TestMethod]
     public async Task ConsultarPorId()
     {
-        var anime = new Anime
-        {
-            Id = 0,
-            Nome = "Naruto Shippuden",
-            EpQueParei = 71,
-            NumeroEpisodios = 500,
-            Status = "Assistindo"
-        };
+        Anime anime = new Anime(1, "Naruto Shippuden", 74, 500, "Assistindo");
 
         IAnimeRepository repository = new AnimeRepository(context);
         // Isso estava interferindo na parte de listar todos.
@@ -114,14 +85,7 @@ public class AnimeRepositoryTest
     {
         IAnimeRepository repository = new AnimeRepository(context);
 
-        Anime anime = new Anime
-        {
-            Id = 1,
-            Nome = "Dragon Ball Z",
-            EpQueParei = 82,
-            NumeroEpisodios = 291,
-            Status = "Assistindo"
-        };
+        Anime anime = new Anime(1, "Dragon Ball Z", 82, 291, "Assistindo");
 
         await repository.Update(anime);
 

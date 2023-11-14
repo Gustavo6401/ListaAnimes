@@ -1177,7 +1177,7 @@
           "bin/placeholder/Dominio.dll": {}
         }
       },
-      "Infraestrutura/1.0.0": {
+      "Infraestrutura.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -1186,10 +1186,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13"
         },
         "compile": {
-          "bin/placeholder/Infraestrutura.dll": {}
+          "bin/placeholder/Infraestrutura.Data.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Infraestrutura.dll": {}
+          "bin/placeholder/Infraestrutura.Data.dll": {}
         }
       }
     }
@@ -3360,15 +3360,15 @@
       "path": "../Dominio/Dominio.csproj",
       "msbuildProject": "../Dominio/Dominio.csproj"
     },
-    "Infraestrutura/1.0.0": {
+    "Infraestrutura.Data/1.0.0": {
       "type": "project",
-      "path": "../Infraestrutura/Infraestrutura.csproj",
-      "msbuildProject": "../Infraestrutura/Infraestrutura.csproj"
+      "path": "../Infraestrutura/Infraestrutura.Data.csproj",
+      "msbuildProject": "../Infraestrutura/Infraestrutura.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Infraestrutura >= 1.0.0",
+      "Infraestrutura.Data >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.9",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.13",
       "Swashbuckle.AspNetCore >= 6.5.0"
@@ -3402,8 +3402,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura\\Infraestrutura.csproj": {
-              "projectPath": "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura\\Infraestrutura.csproj"
+            "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura\\Infraestrutura.Data.csproj": {
+              "projectPath": "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura\\Infraestrutura.Data.csproj"
             }
           }
         }

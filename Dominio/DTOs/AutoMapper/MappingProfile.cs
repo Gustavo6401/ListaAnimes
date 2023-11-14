@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Dominio.DTOs.AutoMapper
 {
-    internal class MappingProfile : Profile
+    public class MappingProfile : Profile
     {
         public MappingProfile() 
         {
@@ -16,8 +16,15 @@ namespace Dominio.DTOs.AutoMapper
              * 
              */
             CreateMap<AnimeDTO, Anime>();
-            /*CreateMap<Anime, AnimeDTO>()
-                .ForMember(x => x.PorcentagemConcluida)*/
+            CreateMap<Anime, AnimeDTO>()
+                .ForMember(x => x.PorcentagemConcluida, opt => opt.Ignore());
+                    // .AfterMap((src, dest) => dest.PorcentagemConcluida = CalcularPorcentagemConcluida(src));
         }
+
+        // Setei como pública com o único objetivo de fazer o teste unitário.
+        /*public decimal CalcularPorcentagemConcluida(Anime src)
+        {
+            return (decimal)src.EpQueParei * 100 / src.NumeroEpisodios;
+        }*/
     }
 }

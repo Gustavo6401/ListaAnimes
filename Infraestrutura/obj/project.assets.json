@@ -2942,9 +2942,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura\\Infraestrutura.csproj",
-      "projectName": "Infraestrutura",
-      "projectPath": "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura\\Infraestrutura.csproj",
+      "projectUniqueName": "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura\\Infraestrutura.Data.csproj",
+      "projectName": "Infraestrutura.Data",
+      "projectPath": "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura\\Infraestrutura.Data.csproj",
       "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura\\obj\\",
       "projectStyle": "PackageReference",

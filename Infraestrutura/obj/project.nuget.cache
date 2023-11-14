@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e8s87TSRQjbRiwALUMVS/7Lyl3AHPM99LLky6c9ZKbm34p1L/ZHppxXzDE+R8o2hO5jxeenU6Tr91Z/qKrBnwQ==",
+  "dgSpecHash": "E6aiVdLA7Wqatmsbpluqv17FKUf7d3SpF3Zg6RVef2Yr7f6bEQPybiz7gsMdfldC7/n88bO7Vrt8BytCC85FuA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura\\Infraestrutura.csproj",
+  "projectFilePath": "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura\\Infraestrutura.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gustavo\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Gustavo\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",

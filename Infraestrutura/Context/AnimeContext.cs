@@ -34,7 +34,14 @@ namespace Infraestrutura.Context
         // Eu realmente não gosto de utilizar esse método, mas ou era isso, ou jogar a responsabilidade das migrations para a API.
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=localhost;Database=AnimeDB;User Id=sa;Password=MyPass6401@gustavo;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer(@"Server=localhost;Database=AnimeDB;User Id=sa;Password=MyPass6401@gustavo;TrustServerCertificate=True", sqlServerOptionsAction: sqlOptions =>
+            {
+                sqlOptions.EnableRetryOnFailure(
+                    maxRetryCount: 50,
+                    maxRetryDelay: TimeSpan.FromSeconds(10),
+                    errorNumbersToAdd: null
+                );
+            });
         }
 
         public void Update(object entity) => Entry(entity).State = EntityState.Modified;
