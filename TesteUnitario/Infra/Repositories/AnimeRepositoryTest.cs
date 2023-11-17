@@ -75,7 +75,7 @@ public class AnimeRepositoryTest
         Anime anime = await repository.GetByName("Naruto Shippuden");
 
         Assert.AreEqual(anime.Nome, "Naruto Shippuden");
-        Assert.AreEqual(anime.EpQueParei, 71);
+        Assert.AreEqual(anime.EpQueParei, 74);
         Assert.AreEqual(anime.NumeroEpisodios, 500);
         Assert.AreEqual(anime.Status, "Assistindo");
     }

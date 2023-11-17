@@ -1,0 +1,17 @@
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura\bin\Debug\net7.0\Infraestrutura.Data.deps.json
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura\bin\Debug\net7.0\Infraestrutura.Data.runtimeconfig.json
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura\bin\Debug\net7.0\Infraestrutura.Data.dll
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura\bin\Debug\net7.0\Infraestrutura.Data.pdb
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura\bin\Debug\net7.0\Dominio.dll
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura\bin\Debug\net7.0\Dominio.pdb
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura\obj\Debug\net7.0\Infraestrutura.Data.csproj.AssemblyReference.cache
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura\obj\Debug\net7.0\Infraestrutura.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura\obj\Debug\net7.0\Infraestrutura.Data.AssemblyInfoInputs.cache
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura\obj\Debug\net7.0\Infraestrutura.Data.AssemblyInfo.cs
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura\obj\Debug\net7.0\Infraestrutura.Data.csproj.CoreCompileInputs.cache
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura\obj\Debug\net7.0\Infraestrutura.Data.csproj.CopyComplete
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura\obj\Debug\net7.0\Infraestrutura.Data.dll
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura\obj\Debug\net7.0\refint\Infraestrutura.Data.dll
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura\obj\Debug\net7.0\Infraestrutura.Data.pdb
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura\obj\Debug\net7.0\Infraestrutura.Data.genruntimeconfig.cache
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura\obj\Debug\net7.0\ref\Infraestrutura.Data.dll

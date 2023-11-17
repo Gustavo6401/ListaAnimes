@@ -16,12 +16,15 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{6EECC363-65FB-4DE4-9647-B897F73D2DB4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesteUnitario", "TesteUnitario\TesteUnitario.csproj", "{537D3E71-AEB6-49E0-8D8F-5BCB4B3127ED}"
+	ProjectSection(ProjectDependencies) = postProject
+		{58B688DD-6729-4FC6-9129-270BED68705D} = {58B688DD-6729-4FC6-9129-270BED68705D}
+	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infraestrutura", "Infraestrutura\Infraestrutura.csproj", "{8A208679-698E-46DB-AA5E-C8926111A212}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infraestrutura.Data", "Infraestrutura\Infraestrutura.Data.csproj", "{8A208679-698E-46DB-AA5E-C8926111A212}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{70825EDB-44B4-428A-906E-FDB9CA0BE7FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servicos", "Servicos\Servicos.csproj", "{58B688DD-6729-4FC6-9129-270BED68705D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servicos", "Servicos\Servicos.csproj", "{58B688DD-6729-4FC6-9129-270BED68705D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

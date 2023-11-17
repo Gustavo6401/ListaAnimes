@@ -20,6 +20,7 @@
     <ProjectReference Include="..\API\API.csproj" />
     <ProjectReference Include="..\Dominio\Dominio.csproj" />
     <ProjectReference Include="..\Infraestrutura\Infraestrutura.Data.csproj" />
+    <ProjectReference Include="..\Servicos\Servicos.csproj" />
   </ItemGroup>
 
   <ItemGroup>

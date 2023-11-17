@@ -10,21 +10,25 @@ namespace Dominio.DTOs.AutoMapper
 {
     public class MappingProfile : Profile
     {
-        public MappingProfile() 
+        /*public MappingProfile() 
         {
-            /*
-             * 
-             */
             CreateMap<AnimeDTO, Anime>();
             CreateMap<Anime, AnimeDTO>()
                 .ForMember(x => x.PorcentagemConcluida, opt => opt.Ignore());
                     // .AfterMap((src, dest) => dest.PorcentagemConcluida = CalcularPorcentagemConcluida(src));
-        }
-
-        // Setei como pública com o único objetivo de fazer o teste unitário.
-        /*public decimal CalcularPorcentagemConcluida(Anime src)
-        {
-            return (decimal)src.EpQueParei * 100 / src.NumeroEpisodios;
         }*/
+
+        public static IMapper Initialize()
+        {
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<AnimeDTO, Anime>();
+                cfg.CreateMap<Anime, AnimeDTO>()
+                    .ForMember(dest => dest.PorcentagemConcluida, opt => opt.Ignore());
+                // Adicione outras configurações de mapeamento, se necessário
+            });
+
+            return config.CreateMapper();
+        }
     }
 }

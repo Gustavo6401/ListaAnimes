@@ -1721,6 +1721,20 @@
         "runtime": {
           "bin/placeholder/Infraestrutura.Data.dll": {}
         }
+      },
+      "Servicos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Dominio": "1.0.0",
+          "Infraestrutura.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Servicos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Servicos.dll": {}
+        }
       }
     }
   },
@@ -5217,6 +5231,11 @@
       "type": "project",
       "path": "../Infraestrutura/Infraestrutura.Data.csproj",
       "msbuildProject": "../Infraestrutura/Infraestrutura.Data.csproj"
+    },
+    "Servicos/1.0.0": {
+      "type": "project",
+      "path": "../Servicos/Servicos.csproj",
+      "msbuildProject": "../Servicos/Servicos.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5227,6 +5246,7 @@
       "MSTest.TestAdapter >= 2.2.10",
       "MSTest.TestFramework >= 3.1.1",
       "Microsoft.NET.Test.Sdk >= 17.5.0",
+      "Servicos >= 1.0.0",
       "coverlet.collector >= 3.2.0"
     ]
   },
@@ -5265,6 +5285,9 @@
             },
             "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura\\Infraestrutura.Data.csproj": {
               "projectPath": "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura\\Infraestrutura.Data.csproj"
+            },
+            "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Servicos\\Servicos.csproj": {
+              "projectPath": "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Servicos\\Servicos.csproj"
             }
           }
         }

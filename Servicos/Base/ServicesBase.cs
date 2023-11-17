@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Dominio.DTOs.AutoMapper;
 using Dominio.Interfaces.Repositories.Base;
 using Dominio.Interfaces.Services.Base;
 
@@ -11,7 +12,10 @@ public class ServicesBase<T, U> : IServicesBase<T, U> where T : class where U : 
 
     public ServicesBase(IRepository<U> repository, IMapper mapper)
     {
+        // Deixarei desse jeito por enquanto, não estou afim de reescrever a PORRA do código inteiro.
         Repository = repository;
+        mapper = MappingProfile.Initialize();
+
         Mapper = mapper;
     }
 
@@ -22,23 +26,29 @@ public class ServicesBase<T, U> : IServicesBase<T, U> where T : class where U : 
         await Repository.Create(model);
     }
 
-    public Task Delete(int id)
+    public async Task Delete(int id)
     {
-        throw new NotImplementedException();
+        await Repository.Delete(id);
     }
 
-    public Task<IEnumerable<T>> GetAll()
+    public async Task<IList<T>> GetAll()
     {
-        throw new NotImplementedException();
+        IList<U> entity = await Repository.GetAll();
+
+        return Mapper.Map<IList<T>>(entity);
     }
 
-    public Task<T> GetById(int id)
+    public async Task<T> GetById(int id)
     {
-        throw new NotImplementedException();
+        U entity = await Repository.GetById(id);
+
+        return Mapper.Map<T>(entity);
     }
 
-    public Task Update(T entity)
+    public async Task Update(T entity)
     {
-        throw new NotImplementedException();
+        var model = Mapper.Map<U>(entity);
+
+        await Repository.Update(model);
     }
 }
