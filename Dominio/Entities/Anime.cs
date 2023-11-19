@@ -25,6 +25,7 @@ namespace Dominio.Entities
             Status = status;
         }
 
+        [Key]
         public int Id { get; set; }
         [MaxLength(150)]
         [Required(ErrorMessage = "Nome Inválido!")]

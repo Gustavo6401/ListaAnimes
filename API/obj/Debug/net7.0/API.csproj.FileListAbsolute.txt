@@ -81,3 +81,4 @@ C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\API\bin\Deb
 C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\API\obj\Debug\net7.0\API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\API\bin\Debug\net7.0\Servicos.dll
 C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\API\bin\Debug\net7.0\Servicos.pdb
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\API\bin\Debug\net7.0\Newtonsoft.Json.dll

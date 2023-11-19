@@ -14,6 +14,7 @@ namespace Dominio.DTOs
             PorcentagemConcluida = (decimal)EpQueParei * 100 / NumeroEpisodios;
         }
 
+        [Key]
         public int Id { get; set; }
         [MaxLength(100)]
         [Required(ErrorMessage = "Nome Obrigatório!")]

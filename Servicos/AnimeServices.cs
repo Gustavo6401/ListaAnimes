@@ -20,8 +20,6 @@ namespace Servicos
 
         public AnimeServices(IMapper mapper, IAnimeRepository repository) : base(repository, mapper)
         {
-            mapper = MappingProfile.Initialize();
-
             Mapper = mapper;
             Repository = repository;
         }

@@ -14,8 +14,6 @@ public class ServicesBase<T, U> : IServicesBase<T, U> where T : class where U : 
     {
         // Deixarei desse jeito por enquanto, não estou afim de reescrever a PORRA do código inteiro.
         Repository = repository;
-        mapper = MappingProfile.Initialize();
-
         Mapper = mapper;
     }
 

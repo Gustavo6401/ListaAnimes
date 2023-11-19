@@ -3,7 +3,10 @@ using Dominio.Interfaces.Services;
 using Infraestrutura.Context;
 using Infraestrutura.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Servicos;
+using AutoMapper;
+using Dominio.DTOs.AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +24,8 @@ builder.Services.AddDbContext<AnimeContext>(options =>
     options.UseSqlServer(sqlServerConnection, 
         b => b.MigrationsAssembly("API")));*/
 
+builder.Services.AddSingleton(new AnimeContext());
+builder.Services.AddSingleton(MappingProfile.Initialize());
 builder.Services.AddScoped<IAnimeRepository, AnimeRepository>();
 builder.Services.AddScoped<IAnimeServices, AnimeServices>();
 

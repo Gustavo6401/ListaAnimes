@@ -33,6 +33,8 @@ namespace Infraestrutura.Repositories.Base
 
         public async Task Update(T entity)
         {
+            Context.Entry(entity).State = EntityState.Detached;
+
             Context.Set<T>().Update(entity);
 
             await Context.SaveChangesAsync();
