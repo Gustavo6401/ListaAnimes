@@ -1010,8 +1010,8 @@
       },
       "API/1.0.0": {
         "dependencies": {
-          "Infraestrutura.Data": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.9",
+          "Servicos": "1.0.0",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {

@@ -1191,6 +1191,20 @@
         "runtime": {
           "bin/placeholder/Infraestrutura.Data.dll": {}
         }
+      },
+      "Servicos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Dominio": "1.0.0",
+          "Infraestrutura.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Servicos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Servicos.dll": {}
+        }
       }
     }
   },
@@ -3364,13 +3378,18 @@
       "type": "project",
       "path": "../Infraestrutura/Infraestrutura.Data.csproj",
       "msbuildProject": "../Infraestrutura/Infraestrutura.Data.csproj"
+    },
+    "Servicos/1.0.0": {
+      "type": "project",
+      "path": "../Servicos/Servicos.csproj",
+      "msbuildProject": "../Servicos/Servicos.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Infraestrutura.Data >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.9",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.13",
+      "Servicos >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -3402,8 +3421,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura\\Infraestrutura.Data.csproj": {
-              "projectPath": "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura\\Infraestrutura.Data.csproj"
+            "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Servicos\\Servicos.csproj": {
+              "projectPath": "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Servicos\\Servicos.csproj"
             }
           }
         }

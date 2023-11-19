@@ -8,9 +8,9 @@
     ".NETCoreApp,Version=v7.0": {
       "API/1.0.0": {
         "dependencies": {
-          "Infraestrutura.Data": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.9",
           "Microsoft.EntityFrameworkCore.Design": "7.0.13",
+          "Servicos": "1.0.0",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {
@@ -635,6 +635,15 @@
         "runtime": {
           "Infraestrutura.Data.dll": {}
         }
+      },
+      "Servicos/1.0.0": {
+        "dependencies": {
+          "Dominio": "1.0.0",
+          "Infraestrutura.Data": "1.0.0"
+        },
+        "runtime": {
+          "Servicos.dll": {}
+        }
       }
     }
   },
@@ -1119,6 +1128,11 @@
       "sha512": ""
     },
     "Infraestrutura.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Servicos/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

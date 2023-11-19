@@ -1,5 +1,9 @@
+using Dominio.Interfaces.Repositories;
+using Dominio.Interfaces.Services;
 using Infraestrutura.Context;
+using Infraestrutura.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Servicos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +20,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AnimeContext>(options =>
     options.UseSqlServer(sqlServerConnection, 
         b => b.MigrationsAssembly("API")));*/
+
+builder.Services.AddScoped<IAnimeRepository, AnimeRepository>();
+builder.Services.AddScoped<IAnimeServices, AnimeServices>();
 
 var app = builder.Build();
 
