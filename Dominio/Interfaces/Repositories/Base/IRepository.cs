@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Dominio.Interfaces.Repositories.Base;
 
-namespace Dominio.Interfaces.Repositories.Base
+public interface IRepository<T> where T : class
 {
-    internal interface IRepository
-    {
-    }
+    Task<IList<T>> GetAll();
+    Task<T> GetById(int id);
+    Task Create(T entity);
+    Task Update(T entity);
+    Task Delete(int id);
 }
