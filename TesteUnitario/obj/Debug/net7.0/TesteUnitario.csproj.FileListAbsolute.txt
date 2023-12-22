@@ -168,3 +168,5 @@ C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\TesteUnitar
 C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\TesteUnitario\bin\Debug\net7.0\Servicos.dll
 C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\TesteUnitario\bin\Debug\net7.0\Infraestrutura.Data.pdb
 C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\TesteUnitario\bin\Debug\net7.0\Servicos.pdb
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\TesteUnitario\bin\Debug\net7.0\Infraestrutura.RequisitarAPI.dll
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\TesteUnitario\bin\Debug\net7.0\Infraestrutura.RequisitarAPI.pdb

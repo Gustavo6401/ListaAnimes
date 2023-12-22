@@ -1,0 +1,54 @@
+﻿@using Dominio.DTOs;
+@using Infraestrutura.RequisitarAPI.API;
+@using System.Net;
+@inject IJSRuntime JsRuntime;
+@inject AnimeAPI api;
+
+<h3>CadastroAnime</h3>
+
+<label>Nome: </label>
+<input @bind=Nome />
+
+<label>Episódio que Parei: </label>
+<input @bind=EpQueParei/>
+
+<label>Número de Episódios: </label>
+<input @bind=NumeroEpisodios />
+
+<label>Status: </label>
+<input @bind=Status />
+
+<button class="btn btn-success" onclick="@AdicionarAnime">Adicionar Anime</button>
+
+@code {
+    [Parameter]
+    public int Id { get; set; } = 0;
+
+    [Parameter]
+    public string? Nome { get; set; }
+
+    [Parameter]
+    public int EpQueParei { get; set; }
+
+    [Parameter]
+    public int NumeroEpisodios { get; set; }
+
+    [Parameter]
+    public string? Status { get; set; }
+}
+
+@functions {
+    // Eu faria facilmente um teste unitário aqui.
+    public async Task AdicionarAnime()
+    {
+        AnimeDTO dto = new AnimeDTO(Id, Nome, NumeroEpisodios, Status, EpQueParei);
+        // AnimeAPI api = new AnimeAPI();
+
+        HttpResponseMessage response = await api.CadastrarAnime(dto);
+
+        if (response.StatusCode == HttpStatusCode.OK)
+            await JsRuntime.InvokeVoidAsync("alert", "Cadastro Feito Com Sucesso!");
+        else
+            await JsRuntime.InvokeVoidAsync("alert", "Erro no Cadastro!");
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "63AoB9wfPD2pXOU2V27SZM2vfI3qk4qmq8WvmovfvKvxU+a7a1WKRyXsc6BpvSGRxRCjGQrlVC0xAue/ibYzQg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura.RequisitarAPI\\Infraestrutura.RequisitarAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gustavo\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Gustavo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Gustavo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

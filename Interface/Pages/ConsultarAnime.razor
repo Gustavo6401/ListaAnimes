@@ -1,0 +1,52 @@
+﻿@page "/Anime"
+@using Dominio.DTOs;
+@using Infraestrutura.RequisitarAPI.API;
+@inject AnimeAPI api;
+
+<PageTitle>Consultar Animes</PageTitle>
+
+<h3>ConsultarAnime</h3>
+
+<label>Nome do Anime: </label>
+<input type="text" />
+
+@if(animes == null)
+{
+    <p><em>Carregando Dados</em></p>
+}
+else {
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Episódio que Parei</th>
+                <th>Número de Episódios</th>
+                <th>Status</th>
+                <th>Porcentagem Concluída</th>
+            </tr>       
+        </thead>
+        <tbody>
+            @foreach (var item in animes)
+            {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Nome</td>
+                        <td>@item.EpQueParei</td>
+                        <td>@item.NumeroEpisodios</td>
+                        <td>@item.Status</td>
+                        <td>@item.PorcentagemConcluida %</td>
+                    </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<AnimeDTO>? animes;
+
+    protected override async Task OnInitializedAsync()
+    {
+        animes = await api.ConsultarTodosAnimes();
+    }
+}

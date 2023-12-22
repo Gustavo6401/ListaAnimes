@@ -1,5 +1,4 @@
-﻿using API.RequisicaoInterna;
-using Dominio.DTOs;
+﻿using Dominio.DTOs;
 using Dominio.Interfaces.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

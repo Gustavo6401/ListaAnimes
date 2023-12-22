@@ -1724,11 +1724,24 @@
           "bin/placeholder/Infraestrutura.Data.dll": {}
         }
       },
-      "Servicos/1.0.0": {
+      "Infraestrutura.RequisitarAPI/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Dominio": "1.0.0",
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "bin/placeholder/Infraestrutura.RequisitarAPI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Infraestrutura.RequisitarAPI.dll": {}
+        }
+      },
+      "Servicos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
           "Infraestrutura.Data": "1.0.0"
         },
         "compile": {
@@ -5237,6 +5250,11 @@
       "path": "../Infraestrutura/Infraestrutura.Data.csproj",
       "msbuildProject": "../Infraestrutura/Infraestrutura.Data.csproj"
     },
+    "Infraestrutura.RequisitarAPI/1.0.0": {
+      "type": "project",
+      "path": "../Infraestrutura.RequisitarAPI/Infraestrutura.RequisitarAPI.csproj",
+      "msbuildProject": "../Infraestrutura.RequisitarAPI/Infraestrutura.RequisitarAPI.csproj"
+    },
     "Servicos/1.0.0": {
       "type": "project",
       "path": "../Servicos/Servicos.csproj",
@@ -5248,6 +5266,7 @@
       "API >= 1.0.0",
       "Dominio >= 1.0.0",
       "Infraestrutura.Data >= 1.0.0",
+      "Infraestrutura.RequisitarAPI >= 1.0.0",
       "MSTest.TestAdapter >= 2.2.10",
       "MSTest.TestFramework >= 3.1.1",
       "Microsoft.NET.Test.Sdk >= 17.5.0",
@@ -5287,6 +5306,9 @@
             },
             "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Dominio\\Dominio.csproj": {
               "projectPath": "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Dominio\\Dominio.csproj"
+            },
+            "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura.RequisitarAPI\\Infraestrutura.RequisitarAPI.csproj": {
+              "projectPath": "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura.RequisitarAPI\\Infraestrutura.RequisitarAPI.csproj"
             },
             "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura\\Infraestrutura.Data.csproj": {
               "projectPath": "C:\\Users\\Gustavo\\Documents\\Gustavo TI\\Programação\\C#\\ListaDeAnimes\\Infraestrutura\\Infraestrutura.Data.csproj"

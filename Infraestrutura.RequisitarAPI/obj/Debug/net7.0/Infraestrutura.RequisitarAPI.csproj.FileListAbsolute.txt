@@ -1,0 +1,15 @@
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura.RequisitarAPI\bin\Debug\net7.0\Infraestrutura.RequisitarAPI.deps.json
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura.RequisitarAPI\bin\Debug\net7.0\Infraestrutura.RequisitarAPI.dll
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura.RequisitarAPI\bin\Debug\net7.0\Infraestrutura.RequisitarAPI.pdb
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura.RequisitarAPI\bin\Debug\net7.0\Dominio.dll
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura.RequisitarAPI\bin\Debug\net7.0\Dominio.pdb
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura.RequisitarAPI\obj\Debug\net7.0\Infraestrutura.RequisitarAPI.csproj.AssemblyReference.cache
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura.RequisitarAPI\obj\Debug\net7.0\Infraestrutura.RequisitarAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura.RequisitarAPI\obj\Debug\net7.0\Infraestrutura.RequisitarAPI.AssemblyInfoInputs.cache
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura.RequisitarAPI\obj\Debug\net7.0\Infraestrutura.RequisitarAPI.AssemblyInfo.cs
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura.RequisitarAPI\obj\Debug\net7.0\Infraestrutura.RequisitarAPI.csproj.CoreCompileInputs.cache
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura.RequisitarAPI\obj\Debug\net7.0\Infraestrutura.RequisitarAPI.csproj.CopyComplete
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura.RequisitarAPI\obj\Debug\net7.0\Infraestrutura.RequisitarAPI.dll
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura.RequisitarAPI\obj\Debug\net7.0\refint\Infraestrutura.RequisitarAPI.dll
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura.RequisitarAPI\obj\Debug\net7.0\Infraestrutura.RequisitarAPI.pdb
+C:\Users\Gustavo\Documents\Gustavo TI\Programação\C#\ListaDeAnimes\Infraestrutura.RequisitarAPI\obj\Debug\net7.0\ref\Infraestrutura.RequisitarAPI.dll

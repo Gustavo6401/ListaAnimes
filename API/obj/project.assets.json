@@ -1209,7 +1209,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Dominio": "1.0.0",
           "Infraestrutura.Data": "1.0.0"
         },
         "compile": {

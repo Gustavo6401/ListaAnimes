@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v7.0": {
       "Servicos/1.0.0": {
         "dependencies": {
-          "Dominio": "1.0.0",
           "Infraestrutura.Data": "1.0.0"
         },
         "runtime": {
