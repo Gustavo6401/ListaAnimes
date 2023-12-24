@@ -1,13 +1,70 @@
 ﻿@page "/Anime/Create"
 
+@using Dominio.DTOs;
+@using Infraestrutura.RequisitarAPI.API;
+@using System.Net;
+@inject IJSRuntime JsRuntime;
+@inject AnimeAPI api;
+
 <PageTitle>Cadastro de Anime</PageTitle>
 
 <h1>Seja Muito Bem-Vindo!</h1>
 
-<h3>Create</h3>
+<h3>Cadastro Anime</h3>
 
-<CadastroAnime></CadastroAnime>
+<div class="form-group">
+    <label class="control-label">Nome: </label>
+    <input class="form-control" @bind=Nome />
+</div>
+<div class="form-group">
+    <label class="control-label">Episódio que Parei: </label>
+    <input class="form-control" @bind=EpQueParei/>
+</div>
+<div class="form-group">
+    <label class="control-label">Número de Episódios: </label>
+    <input class="form-control" @bind=NumeroEpisodios />
+</div>
+<div class="form-group">
+    <label class="form-group">Status</label>
+    <select class="form-control" @bind=Status>
+        <option>Assistindo</option>
+        <option>Assistido</option>
+        <option>Interessado</option>
+    </select>
+</div>
+<div class="form-group">
+    <button class="btn btn-success" onclick="@AdicionarAnime">Adicionar Anime</button>
+</div>
 
 @code {
+    [Parameter]
+    public int Id { get; set; } = 0;
 
+    [Parameter]
+    public string? Nome { get; set; }
+
+    [Parameter]
+    public int EpQueParei { get; set; }
+
+    [Parameter]
+    public int NumeroEpisodios { get; set; }
+
+    [Parameter]
+    public string? Status { get; set; }
+}
+
+@functions {
+    // Eu faria facilmente um teste unitário aqui.
+    public async Task AdicionarAnime()
+    {
+        AnimeDTO dto = new AnimeDTO(Id, Nome, NumeroEpisodios, Status, EpQueParei);
+        // AnimeAPI api = new AnimeAPI();
+
+        HttpResponseMessage response = await api.CadastrarAnime(dto);
+
+        if (response.StatusCode == HttpStatusCode.OK)
+            await JsRuntime.InvokeVoidAsync("alert", "Cadastro Feito Com Sucesso!");
+        else
+            await JsRuntime.InvokeVoidAsync("alert", "Erro no Cadastro!");
+    }
 }

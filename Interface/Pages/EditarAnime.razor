@@ -4,26 +4,33 @@
 @using System.Net;
 @inject AnimeAPI api;
 @inject IJSRuntime JsRuntime;
+@inject NavigationManager Navigation;
 
 <h3>Editar Anime</h3>
 
-<label>Nome</label>
-<input type="text" @bind-value=dto.Nome />
-
-<label>Número de Episódios</label>
-<input type="number" @bind-value=dto.NumeroEpisodios />
-
-<label>Status</label>
-<select @bind=dto.Status>
-    <option>Assistindo</option>
-    <option>Assistido</option>
-    <option>Interessado</option>
-</select>
-
-<label>Episódio que Parei</label>
-<input type="number" @bind-value=dto.EpQueParei />
-
-<a class="btn btn-warning" @onclick=Update>Editar Anime</a>
+<div class="form-group">
+    <label class="control-label">Nome</label>
+    <input class="form-control" type="text" @bind-value=dto.Nome />
+</div>
+<div class="form-group">
+    <label class="control-label">Número de Episódios</label>
+    <input class="form-control" type="number" @bind-value=dto.NumeroEpisodios />
+</div>
+<div class="form-group">
+    <label class="control-label">Status</label>
+    <select class="form-control" @bind=dto.Status>
+        <option>Assistindo</option>
+        <option>Assistido</option>
+        <option>Interessado</option>
+    </select>
+</div>
+<div class="form-group">
+    <label class="control-label">Episódio que Parei</label>
+    <input class="form-control" type="number" @bind-value=dto.EpQueParei />
+</div>
+<div class="form-group">
+    <a class="btn btn-warning" @onclick=Update>Editar Anime</a>
+</div>
 
 @code {
     AnimeDTO dto = new();
@@ -46,7 +53,11 @@
         HttpResponseMessage response = await api.AlterarDados(id, dto);
 
         if (response.StatusCode == HttpStatusCode.OK)
+        {
             await JsRuntime.InvokeVoidAsync("alert", "Dados Modificados com Sucesso!");
+
+            Navigation.NavigateTo("/Anime");
+        }
         else
             await JsRuntime.InvokeVoidAsync("alert", "Ocorreu um Erro! Verifique o Console do Navegador!");
     }

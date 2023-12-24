@@ -24,16 +24,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gustavo/Documents/Gustavo TI/Programação/C\#/ListaDeAnimes/Interface/Pages/CadastroAnime.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FkYXN0cm9BbmltZS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Gustavo/Documents/Gustavo TI/Programação/C\#/ListaDeAnimes/Interface/Pages/ConsultarAnime.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFyQW5pbWUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Gustavo/Documents/Gustavo TI/Programação/C\#/ListaDeAnimes/Interface/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Gustavo/Documents/Gustavo TI/Programação/C\#/ListaDeAnimes/Interface/Pages/Create.razor]
@@ -42,10 +34,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Gustavo/Documents/Gustavo TI/Programação/C\#/ListaDeAnimes/Interface/Pages/EditarAnime.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdGFyQW5pbWUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Gustavo/Documents/Gustavo TI/Programação/C\#/ListaDeAnimes/Interface/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Gustavo/Documents/Gustavo TI/Programação/C\#/ListaDeAnimes/Interface/Pages/Index.razor]
