@@ -2,6 +2,7 @@
 @using Dominio.DTOs;
 @using Infraestrutura.RequisitarAPI.API;
 @inject AnimeAPI api;
+@inject IJSRuntime JsRuntime;
 
 <PageTitle>Consultar Animes</PageTitle>
 
@@ -41,6 +42,7 @@ else {
                         <td>@item.PorcentagemConcluida %</td>
                         <td>
                             <a href="Anime/Edit/@item.Id" class="btn btn-warning">Edit</a>
+                            <a class="btn btn-danger" @onclick="async () => await DeletarAnimes(item.Id)">Delete</a>
                         </td>
                     </tr>
             }
@@ -68,6 +70,19 @@ else {
     private async Task CarregarAlgunsAnimes()
     {
         animes = await api.ConsultarPorNome(Nome);
+        StateHasChanged();
+    }
+
+    private async Task DeletarAnimes(int id)
+    {
+        bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Tem certeza que Deseja deletar?");
+
+        if(confirmed is false)
+            return;
+
+        HttpResponseMessage response = await api.RemoverDados(id);
+        animes = await api.ConsultarTodosAnimes();
+
         StateHasChanged();
     }
 }

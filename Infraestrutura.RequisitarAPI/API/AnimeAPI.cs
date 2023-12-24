@@ -94,5 +94,14 @@ a parte de consulta parecida com a de cadastro.*/
 
             return listaAnimes;
         }
+
+        public async Task<HttpResponseMessage> RemoverDados(int id)
+        {
+            HttpClient client = new HttpClient();
+
+            HttpResponseMessage response = await client.DeleteAsync($"http://localhost:5036/api/Anime/{id}"); ;
+
+            return response;
+        }
     }
 }

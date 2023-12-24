@@ -64,5 +64,14 @@ namespace TesteUnitario.Requisicao
 
             Assert.AreEqual(response.StatusCode, HttpStatusCode.OK);
         }
+
+        [TestMethod]
+        public async Task Delete()
+        {
+            AnimeAPI api = new AnimeAPI();
+            HttpResponseMessage response = await api.RemoverDados(2);
+
+            Assert.AreEqual(response.StatusCode, HttpStatusCode.OK);
+        }
     }
 }

@@ -93,7 +93,7 @@ namespace API.Controllers
         [HttpPut("{id:int}")]
         public async Task<IActionResult> Update(int id, [FromBody] AnimeDTO anime)
         {
-            /*Estou com um problema com os try catch, porém, estou procurando qual a melhor forma de 
+            /*Estou com um problema com o try catch, porém, estou procurando qual a melhor forma de 
              * implementar o try catch.
              * 
              * try
