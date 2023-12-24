@@ -45,9 +45,9 @@ namespace TesteUnitario.Mock.RepositoryMock
             return lista.FirstOrDefault(a => a.Id == id);
         }
 
-        public async Task<Anime> GetByName(string nome)
+        public async Task<List<Anime>> GetByName(string nome)
         {
-            return lista.FirstOrDefault(a => a.Nome == nome);
+            return lista.Where(a => a.Nome == nome).ToList();
         }
 
         public async Task Update(Anime entity)

@@ -41,11 +41,11 @@ public class AnimeServicesMock : IAnimeServices
         return Mapper.Map<AnimeDTO>(entity);
     }
 
-    public async Task<AnimeDTO> GetByName(string nome)
+    public async Task<List<AnimeDTO>> GetByName(string nome)
     {
-        Anime anime = await Repository.GetByName(nome);
+        List<Anime> anime = await Repository.GetByName(nome);
 
-        return Mapper.Map<AnimeDTO>(anime);
+        return Mapper.Map<List<AnimeDTO>>(anime);
     }
 
     public async Task Update(AnimeDTO entity)

@@ -75,7 +75,7 @@ namespace API.Controllers
         {
             try
             {
-                AnimeDTO anime = await Services.GetByName(nome);
+                List<AnimeDTO> anime = await Services.GetByName(nome);
 
                 if (anime == null)
                 {
@@ -93,7 +93,10 @@ namespace API.Controllers
         [HttpPut("{id:int}")]
         public async Task<IActionResult> Update(int id, [FromBody] AnimeDTO anime)
         {
-            try
+            /*Estou com um problema com os try catch, porém, estou procurando qual a melhor forma de 
+             * implementar o try catch.
+             * 
+             * try
             {
                 if (anime == null) return NotFound();
                 if (anime.Id != id) return NotFound();
@@ -105,7 +108,13 @@ namespace API.Controllers
             catch
             {
                 return BadRequest();
-            }
+            }*/
+            if (anime == null) return NotFound();
+            if (anime.Id != id) return NotFound();
+
+            await Services.Update(anime);
+
+            return Ok();
         }
 
         [HttpDelete("{id:int}")]

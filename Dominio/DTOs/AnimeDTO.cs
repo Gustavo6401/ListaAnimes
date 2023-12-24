@@ -4,9 +4,22 @@ namespace Dominio.DTOs
 {
     public class AnimeDTO
     {
+        public AnimeDTO()
+        {
+
+        }
         public AnimeDTO(int id, string? nome, int numeroEpisodios, string? status, int epQueParei)
         {
             Id = id;
+            Nome = nome;
+            NumeroEpisodios = numeroEpisodios;
+            Status = status;
+            EpQueParei = epQueParei;
+            PorcentagemConcluida = (decimal)EpQueParei * 100 / NumeroEpisodios;
+        }
+
+        public AnimeDTO(string? nome, int numeroEpisodios, string? status, int epQueParei)
+        {
             Nome = nome;
             NumeroEpisodios = numeroEpisodios;
             Status = status;

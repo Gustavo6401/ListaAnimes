@@ -15,6 +15,6 @@ namespace Infraestrutura.Repositories
             Context = context;
         }
 
-        public async Task<Anime> GetByName(string nome) => await Context.Animes.FirstOrDefaultAsync(a => a.Nome.Contains(nome));
+        public async Task<List<Anime>> GetByName(string nome) => await Context.Animes.Where(a => a.Nome.Contains(nome)).ToListAsync();
     }
 }

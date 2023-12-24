@@ -21,10 +21,10 @@ public class AnimeRepositoryTest
 
         var resultado = await repository.GetByName("Naruto Shippuden");
 
-        Assert.AreEqual(anime.Nome, resultado.Nome);
-        Assert.AreEqual(anime.EpQueParei, resultado.EpQueParei);
-        Assert.AreEqual(anime.NumeroEpisodios, resultado.NumeroEpisodios);
-        Assert.AreEqual(anime.Status, resultado.Status);
+        Assert.AreEqual(anime.Nome, resultado[0].Nome);
+        Assert.AreEqual(anime.EpQueParei, resultado[0].EpQueParei);
+        Assert.AreEqual(anime.NumeroEpisodios, resultado[0].NumeroEpisodios);
+        Assert.AreEqual(anime.Status, resultado[0].Status);
     }
 
     [TestMethod]
@@ -72,12 +72,12 @@ public class AnimeRepositoryTest
     {
         IAnimeRepository repository = new AnimeRepository(context);
 
-        Anime anime = await repository.GetByName("Naruto Shippuden");
+        List<Anime> anime = await repository.GetByName("Naruto Shippuden");
 
-        Assert.AreEqual(anime.Nome, "Naruto Shippuden");
-        Assert.AreEqual(anime.EpQueParei, 74);
-        Assert.AreEqual(anime.NumeroEpisodios, 500);
-        Assert.AreEqual(anime.Status, "Assistindo");
+        Assert.AreEqual(anime[0].Nome, "Naruto Shippuden");
+        Assert.AreEqual(anime[0].EpQueParei, 74);
+        Assert.AreEqual(anime[0].NumeroEpisodios, 500);
+        Assert.AreEqual(anime[0].Status, "Assistindo");
     }
 
     [TestMethod]

@@ -24,11 +24,11 @@ namespace Servicos
             Repository = repository;
         }
 
-        public async Task<AnimeDTO> GetByName(string nome)
+        public async Task<List<AnimeDTO>> GetByName(string nome)
         {
-            Anime anime = await Repository.GetByName(nome);
+            List<Anime>? anime = await Repository.GetByName(nome);
 
-            return Mapper.Map<AnimeDTO>(anime);
+            return Mapper.Map<List<AnimeDTO>>(anime);
         }
     }
 }

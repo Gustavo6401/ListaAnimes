@@ -6,5 +6,5 @@ namespace Dominio.Interfaces.Services;
 
 public interface IAnimeServices : IServicesBase<AnimeDTO, Anime>
 {
-    Task<AnimeDTO> GetByName(string nome);
+    Task<List<AnimeDTO>> GetByName(string nome);
 }

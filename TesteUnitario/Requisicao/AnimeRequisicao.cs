@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Azure;
 
 namespace TesteUnitario.Requisicao
 {
@@ -31,6 +32,37 @@ namespace TesteUnitario.Requisicao
             List<AnimeDTO> response = await api.ConsultarTodosAnimes();
 
             Assert.IsNotNull(response);
+        }
+
+        [TestMethod]
+        public async Task GetById()
+        {
+            AnimeAPI api = new AnimeAPI();
+            AnimeDTO dbz = await api.ConsultarPorId(2);
+
+            Assert.AreEqual(2, dbz.Id);
+            Assert.AreEqual("Dragon Ball Z", dbz.Nome);
+        }
+
+        [TestMethod]
+        public async Task GetByName()
+        {
+            AnimeAPI api = new AnimeAPI();
+            List<AnimeDTO>? lista = await api.ConsultarPorNome("Bleach");
+
+            Assert.AreEqual(3, lista.ElementAt(0).Id);
+            Assert.AreEqual("Bleach", lista.ElementAt(0).Nome);
+        }
+
+        [TestMethod]
+        public async Task Edit()
+        {
+            AnimeDTO anime = new AnimeDTO(2002, "One Piece", 1079, "Assistindo", 69);
+
+            AnimeAPI api = new AnimeAPI();            
+            HttpResponseMessage response = await api.AlterarDados(2002, anime);
+
+            Assert.AreEqual(response.StatusCode, HttpStatusCode.OK);
         }
     }
 }

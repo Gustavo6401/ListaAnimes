@@ -1,0 +1,53 @@
+﻿@page "/Anime/Edit/{Id}"
+@using Dominio.DTOs;
+@using Infraestrutura.RequisitarAPI.API;
+@using System.Net;
+@inject AnimeAPI api;
+@inject IJSRuntime JsRuntime;
+
+<h3>Editar Anime</h3>
+
+<label>Nome</label>
+<input type="text" @bind-value=dto.Nome />
+
+<label>Número de Episódios</label>
+<input type="number" @bind-value=dto.NumeroEpisodios />
+
+<label>Status</label>
+<select @bind=dto.Status>
+    <option>Assistindo</option>
+    <option>Assistido</option>
+    <option>Interessado</option>
+</select>
+
+<label>Episódio que Parei</label>
+<input type="number" @bind-value=dto.EpQueParei />
+
+<a class="btn btn-warning" @onclick=Update>Editar Anime</a>
+
+@code {
+    AnimeDTO dto = new();
+
+    [Parameter]
+    public string Id { get; set; }
+    int id = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        id = Convert.ToInt32(Id);
+
+        dto = await api.ConsultarPorId(id);
+    }
+
+    public async Task Update()
+    {
+        id = Convert.ToInt32(Id);
+
+        HttpResponseMessage response = await api.AlterarDados(id, dto);
+
+        if (response.StatusCode == HttpStatusCode.OK)
+            await JsRuntime.InvokeVoidAsync("alert", "Dados Modificados com Sucesso!");
+        else
+            await JsRuntime.InvokeVoidAsync("alert", "Ocorreu um Erro! Verifique o Console do Navegador!");
+    }
+}

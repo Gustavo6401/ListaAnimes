@@ -21,6 +21,9 @@ builder.Services.AddCors(options =>
         builder.WithOrigins("https://localhost:7227")
             .AllowAnyHeader()
             .AllowAnyMethod();
+        builder.WithOrigins("http://localhost:5177")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
     });
 });
 
@@ -28,7 +31,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Comentei essas linhas para não quebrar o DDD e o princípio de SOLID.
+// Comentei essas linhas para nï¿½o quebrar o DDD e o princï¿½pio de SOLID.
 /*var sqlServerConnection = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<AnimeContext>(options =>

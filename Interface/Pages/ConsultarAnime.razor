@@ -8,14 +8,17 @@
 <h3>ConsultarAnime</h3>
 
 <label>Nome do Anime: </label>
-<input type="text" />
+<input type="text" @bind=Nome />
+<button class="btn btn-primary" @onclick=CarregarAlgunsAnimes>Pesquisar</button>
+<br />
+<a class="btn btn-success" href="Anime/Create">Adicionar Anime</a>
 
 @if(animes == null)
 {
     <p><em>Carregando Dados</em></p>
 }
 else {
-    <table>
+        <table class="table table-responsive table-striped">
         <thead>
             <tr>
                 <th>Id</th>
@@ -29,13 +32,16 @@ else {
         <tbody>
             @foreach (var item in animes)
             {
-                    <tr>
+                <tr>
                         <td>@item.Id</td>
                         <td>@item.Nome</td>
                         <td>@item.EpQueParei</td>
                         <td>@item.NumeroEpisodios</td>
                         <td>@item.Status</td>
                         <td>@item.PorcentagemConcluida %</td>
+                        <td>
+                            <a href="Anime/Edit/@item.Id" class="btn btn-warning">Edit</a>
+                        </td>
                     </tr>
             }
         </tbody>
@@ -43,10 +49,26 @@ else {
 }
 
 @code {
-    private List<AnimeDTO>? animes;
+    [Parameter]
+    public string? Nome { get; set; }
+
+    private List<AnimeDTO> animes = new List<AnimeDTO>(); // Inicialize a lista para evitar verificações de nulidade
 
     protected override async Task OnInitializedAsync()
     {
+        await CarregarAnimes();
+    }
+
+    private async Task CarregarAnimes()
+    {
         animes = await api.ConsultarTodosAnimes();
+        StateHasChanged(); // Força a atualização da interface após obter os dados
+    }
+
+    private async Task CarregarAlgunsAnimes()
+    {
+        animes = await api.ConsultarPorNome(Nome);
+        StateHasChanged();
     }
 }
+

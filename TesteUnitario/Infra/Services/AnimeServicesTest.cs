@@ -57,14 +57,14 @@ namespace TesteUnitario.Infra.Services
         public async Task ConsultarPorNome()
         {
             IAnimeServices services = new AnimeServices(Mapper, RepositoryMock);
-            AnimeDTO dto = await services.GetByName("Naruto Shippuden");
+            List<AnimeDTO> dto = await services.GetByName("Naruto Shippuden");
 
-            Assert.AreEqual(dto.Id, 1);
-            Assert.AreEqual(dto.Nome, "Naruto Shippuden");
-            Assert.AreEqual(dto.EpQueParei, 80);
-            Assert.AreEqual(dto.NumeroEpisodios, 500);
-            Assert.AreEqual(dto.Status, "Assistindo");
-            Assert.AreEqual(dto.PorcentagemConcluida, 16);
+            Assert.AreEqual(dto[0].Id, 1);
+            Assert.AreEqual(dto[0].Nome, "Naruto Shippuden");
+            Assert.AreEqual(dto[0].EpQueParei, 80);
+            Assert.AreEqual(dto[0].NumeroEpisodios, 500);
+            Assert.AreEqual(dto[0].Status, "Assistindo");
+            Assert.AreEqual(dto[0].PorcentagemConcluida, 16);
         }
 
         [TestMethod]
